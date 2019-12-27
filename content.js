@@ -1,7 +1,23 @@
+function updatePlayerList(){
+  let playerList = document.getElementById("playerList")
+  
+  let playerNames = Object.keys(sessionStorage);
+  playerNames.map(
+    name => {
+      alert(name);
+      let playerStatus = sessionStorage.getItem(name);
+      var item = document.createElement('li');
+      item.appendChild(document.createTextNode(name));
+      list.appendChild(item);
+    }
+  )
+}
+
 function addPlayer(){
   let playerName = document.getElementById("nameField").value;
   playerName && sessionStorage.setItem(playerName, "Alive");
   document.getElementById("nameField").value = "";
+  updatePlayerList()
 }
 
 function swapPlayerStatus(){
@@ -30,8 +46,8 @@ function getKilled(){
 }
 
 function resetSoft(){
-  let playerName = Object.keys(sessionStorage);
-  playerName.map(
+  let playerNames = Object.keys(sessionStorage);
+  playerNames.map(
     name => {
       sessionStorage.setItem(name, "Alive");
     }
