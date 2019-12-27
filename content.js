@@ -8,7 +8,7 @@ function updatePlayerList(){
       let playerStatus = sessionStorage.getItem(name);
       var item = document.createElement('li');
       item.appendChild(document.createTextNode(name));
-      list.appendChild(item);
+      playerList.appendChild(item);
     }
   )
 }
