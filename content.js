@@ -1,9 +1,7 @@
 function addPlayer(){
-  alert("Hi");
   let playerName = document.getElementById("nameField").value;
-  alert(playerName);
   playerName && sessionStorage.setItem(playerName, "Alive");
-  playerName.reset();
+  playerName = "";
 }
 
 function swapPlayerStatus(playerName){
