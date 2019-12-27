@@ -1,6 +1,10 @@
+document.getElementById("addPlayerButton").onclick=addPlayer
 
-function addPlayer(playerName){
-  sessionStorage.setItem(playerName, "Alive");
+function addPlayer(){
+  let playerName = document.getElementById("nameField").value;
+  alert(playerName);
+  playerName && sessionStorage.setItem(playerName, "Alive");
+  playerName.reset();
 }
 
 function swapPlayerStatus(playerName){
