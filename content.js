@@ -1,23 +1,18 @@
-function updatePlayerList(){
+function updatePlayerList(name){
   let playerList = document.getElementById("playerList")
-  
-  let playerNames = Object.keys(sessionStorage);
-  playerNames.map(
-    name => {
-      alert(name);
-      let playerStatus = sessionStorage.getItem(name);
-      var item = document.createElement('li');
-      item.appendChild(document.createTextNode(name));
-      playerList.appendChild(item);
-    }
-  )
+  let playerStatus = sessionStorage.getItem(name);
+  var item = document.createElement('li');
+  item.appendChild(document.createTextNode(name));
+  playerList.appendChild(item);
 }
 
 function addPlayer(){
   let playerName = document.getElementById("nameField").value;
-  playerName && sessionStorage.setItem(playerName, "Alive");
+  if(playerName){
+    sessionStorage.setItem(playerName, "Alive");
+    updatePlayerList(playerName)
+  }
   document.getElementById("nameField").value = "";
-  updatePlayerList()
 }
 
 function swapPlayerStatus(){
