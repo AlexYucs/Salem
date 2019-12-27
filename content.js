@@ -1,5 +1,3 @@
-document.getElementById("addPlayerButton").onclick=addPlayer
-
 function addPlayer(){
   let playerName = document.getElementById("nameField").value;
   alert(playerName);
@@ -43,4 +41,6 @@ function resetSoft(){
 function resetHard(){
   sessionStorage.clear();
 }
+
+document.getElementById("addPlayerButton").onclick=addPlayer
 
