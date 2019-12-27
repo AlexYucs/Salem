@@ -4,7 +4,8 @@ function addPlayer(){
   document.getElementById("nameField").value = "";
 }
 
-function swapPlayerStatus(playerName){
+function swapPlayerStatus(){
+  let playerName = "Alex";
   let status = sessionStorage.getItem(playerName);
   sessionStorage.setItem(saved, "None");
   if(status === "Alive"){
@@ -41,5 +42,8 @@ function resetHard(){
   sessionStorage.clear();
 }
 
-document.getElementById("addPlayerButton").onclick=addPlayer
+document.getElementById("addPlayerButton").onclick = addPlayer;
+document.getElementById("killPlayerButton").onclick = swapPlayerStatus;
+document.getElementById("gameResetButton").onclick = resetSoft;
+document.getElementById("fullResetButton").onclick = resetHard;
 
