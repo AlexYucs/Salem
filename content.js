@@ -1,5 +1,5 @@
 function addPlayer(){
-  let playerName.value = document.getElementById("nameField");
+  let playerName = document.getElementById("nameField").value;
   playerName && sessionStorage.setItem(playerName, "Alive");
   document.getElementById("nameField").value = "";
 }
