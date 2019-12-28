@@ -72,6 +72,7 @@ function resetSoft(){
 
 function resetHard(){
   sessionStorage.clear();
+  location.reload();
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
