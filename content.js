@@ -44,8 +44,8 @@ function getResults(){
 }
 
 function clearResults(){
-  document.getElementById("addPlayerButton").innerHTML = "Killed:";
-  document.getElementById("addPlayerButton").innerHTML = "Saved:";
+  document.getElementById("killedName").innerHTML = "Killed:";
+  document.getElementById("savedName").innerHTML = "Saved:";
   sessionStorage.setItem("killed", "");
   sessionStorage.setItem("saved", "");
 }
