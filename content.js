@@ -112,16 +112,24 @@ function resetHard(){
   location.reload();
 }
 
-async function start(){
+function start(){
   document.getElementById('witchUp').play();
-  await sleep(10000);
-  document.getElementById('witchDown').play();
-  await sleep(2000);
-  document.getElementById('constableUp').play();
-  await sleep(8000);
-  document.getElementById('constableDown').play();
-  await sleep(2000);
-  document.getElementById('end').play();
+  
+  setTimeout(function () {
+    document.getElementById('witchDown').play();
+  }, 10000);
+  
+  setTimeout(function () {
+    document.getElementById('constableUp').play();
+  }, 2000);
+  
+  setTimeout(function () {
+    document.getElementById('constableDown').play();
+  }, 8000);
+  
+  setTimeout(function () {
+    document.getElementById('end').play();
+  }, 2000);
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
