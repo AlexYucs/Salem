@@ -1,1 +1,55 @@
-Valerie you are so weiiiiiiird
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Salem</title>
+  <meta name="description" content="Salem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alex Yu">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/blog-post.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="mt-4">Salem 1692</h1>
+        <hr>
+        <button id="gameResetButton" >Game Reset</button>
+        <button id="fullResetButton" >Full Reset</button>
+        <br/>
+        <br/>
+        <h3>Player List:</h3>
+        <br/>
+        <input id="nameField" placeholder="Enter your name"></input>
+        <button id="addPlayerButton" >Add Player</button>
+        <br/>
+        <br/>
+        <ul id="playerList">
+        </ul>
+        <br/>
+        <hr>
+      </div>
+      <div class="col-md-4">
+        <div class="card my-4">
+          <h5 class="card-header">Nighttime Results:</h5>
+          <div class="card-body">
+            <button id="resultsButton">Show</button>
+            <button id="clearResultsButton">Clear</button>
+            <br/>
+            <br/>
+            <h4 id="killedName">Killed: </h3>
+            <br/>
+            <h4 id="savedName">Saved: </h3>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="content.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
