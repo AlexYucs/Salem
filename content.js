@@ -9,6 +9,7 @@ function updatePlayerList(playerName){
       // this.parentElement.removeChild(this);
   };
   item.appendChild(document.createTextNode(playerName));
+  item.appendChild(newButton);
   playerList.appendChild(item);
 }
 
