@@ -1,8 +1,14 @@
-function updatePlayerList(name){
+function updatePlayerList(playerName){
   let playerList = document.getElementById("playerList")
-  let playerStatus = sessionStorage.getItem(name);
+  let playerStatus = sessionStorage.getItem(playerName);
   var item = document.createElement('li');
-  item.appendChild(document.createTextNode(name));
+  var newButton = document.createElement('button');
+  newButton.innerHTML = 'Kill';
+  newButton.onclick = function () {
+      swapPlayerStatus(playerName)
+      // this.parentElement.removeChild(this);
+  };
+  item.appendChild(document.createTextNode(playerName));
   playerList.appendChild(item);
 }
 
@@ -15,29 +21,29 @@ function addPlayer(){
   document.getElementById("nameField").value = "";
 }
 
-function swapPlayerStatus(){
+function swapPlayerStatus(playerName){
   let playerName = "Alex";
   let status = sessionStorage.getItem(playerName);
-  sessionStorage.setItem(saved, "None");
+  sessionStorage.setItem("saved", "None");
   if(status === "Alive"){
     sessionStorage.setItem(playerName, "Dead");
   }
   else {
-    sessionStorage.setItem(killed, playerName);
+    sessionStorage.setItem("killed", playerName);
     sessionStorage.setItem(playerName, "Alive");
   }
 }
 
 function savedPlayer(playerName){
-  sessionStorage.setItem(saved, playerName);
+  sessionStorage.setItem("saved", playerName);
 }
 
 function getSaved(){
-  sessionStorage.getItem(killed);
+  sessionStorage.getItem("killed");
 }
 
 function getKilled(){
-  sessionStorage.getItem(saved);
+  sessionStorage.getItem("saved");
 }
 
 function resetSoft(){
