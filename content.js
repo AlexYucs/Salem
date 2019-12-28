@@ -23,11 +23,12 @@ function updatePlayerList(playerName){
   aliveButton.type="checkbox";
   aliveButton.checked=true;
 
-  item.appendChild(document.createTextNode(playerName+"  "));
+
+  item.appendChild(aliveButton);
+  item.appendChild(document.createTextNode("  "+playerName+"  "));
   item.appendChild(killButton);
   //item.appendChild(space);
-  item.appendChild(aliveButton);
-
+  
   var br = document.createElement('br');  
   playerList.appendChild(item);  
   playerList.appendChild(br);
