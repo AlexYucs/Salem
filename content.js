@@ -12,9 +12,15 @@ function updatePlayerList(playerName){
   saveButton.onclick = function () {
       savedPlayer(playerName)
   };
+  var deadButton = document.createElement('button');
+  deadButton.innerHTML = 'Dead';
+  deadButton.onclick = function () {
+      this.parentElement.removeChild(this);
+  };
   item.appendChild(document.createTextNode(playerName));
   item.appendChild(killButton);
   item.appendChild(saveButton);
+  item.appendChild(deadButton);
   playerList.appendChild(item);
 }
 
