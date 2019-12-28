@@ -117,19 +117,24 @@ function start(){
   
   setTimeout(function () {
     document.getElementById('witchDown').play();
+    
+    if(true){
+      setTimeout(function () {
+        document.getElementById('constableUp').play();
+        setTimeout(function () {
+          document.getElementById('constableDown').play();
+          setTimeout(function () {
+            document.getElementById('end').play();
+          }, 2000);
+        }, 8000);
+      }, 2000);
+    }
+    else {
+      setTimeout(function () {
+        document.getElementById('end').play();
+      }, 2000);
+    }
   }, 10000);
-  
-  setTimeout(function () {
-    document.getElementById('constableUp').play();
-  }, 2000);
-  
-  setTimeout(function () {
-    document.getElementById('constableDown').play();
-  }, 8000);
-  
-  setTimeout(function () {
-    document.getElementById('end').play();
-  }, 2000);
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
