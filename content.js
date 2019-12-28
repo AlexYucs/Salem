@@ -5,6 +5,7 @@ function updatePlayerList(playerName){
   var item = document.createElement('li');
   var killButton = document.createElement('button');
   killButton.innerHTML = 'Kill';
+  killButton.id = "kill"+playerName;
   killButton.onclick = function () {
       let killCheck = confirm("Are you sure you want to kill "+playerName+"?");
       killCheck && swapPlayerStatus(playerName);
@@ -21,15 +22,26 @@ function updatePlayerList(playerName){
 
   var aliveButton = document.createElement('input');
   aliveButton.type="checkbox";
+  aliveButton.id="alive"+playerName;
   aliveButton.checked=true;
+
+  aliveButton.onchange = function () {
+      if(document.getElementById("alive"+playerName).checked){
+          document.getElementById("kill"+playerName).disabled = false;
+      }
+      else {
+          document.getElementById("kill"+playerName).disabled = true;
+      }
+  };
+
 
   var labelButton = document.createElement('label');
   labelButton.appendChild(aliveButton);
   labelButton.innerHTML = "  "+playerName+"  ";
 
 
-  item.appendChild(labelButton);
-  //item.appendChild(document.createTextNode("  "+playerName+"  "));
+  item.appendChild(aliveButton);
+  item.appendChild(document.createTextNode("  "+playerName+"  "));
   item.appendChild(killButton);
   //item.appendChild(space);
   
