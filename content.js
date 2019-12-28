@@ -26,10 +26,10 @@ function swapPlayerStatus(playerName){
   let status = sessionStorage.getItem(playerName);
   sessionStorage.setItem("saved", "None");
   if(status === "Alive"){
+    sessionStorage.setItem("killed", playerName);
     sessionStorage.setItem(playerName, "Dead");
   }
   else {
-    sessionStorage.setItem("killed", playerName);
     sessionStorage.setItem(playerName, "Alive");
   }
 }
