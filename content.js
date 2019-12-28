@@ -38,12 +38,16 @@ function savedPlayer(playerName){
   sessionStorage.setItem("saved", playerName);
 }
 
-function getSaved(){
-  document.getElementById("addPlayerButton").value = sessionStorage.getItem("killed");
+function getResults(){
+  document.getElementById("killedName").value = sessionStorage.getItem("killed");
+  document.getElementById("savedName").value = sessionStorage.getItem("saved");
 }
 
-function getKilled(){
-  document.getElementById("addPlayerButton").value = sessionStorage.getItem("saved");
+function clearResults(){
+  document.getElementById("addPlayerButton").value = "";
+  document.getElementById("addPlayerButton").value = "";
+  sessionStorage.setItem("killed", "");
+  sessionStorage.setItem("saved", "");
 }
 
 function resetSoft(){
@@ -60,7 +64,7 @@ function resetHard(){
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
-document.getElementById("killPlayerButton").onclick = swapPlayerStatus;
+document.getElementById("resultsButton").onclick = getResults;
 document.getElementById("gameResetButton").onclick = resetSoft;
 document.getElementById("fullResetButton").onclick = resetHard;
 
