@@ -123,7 +123,8 @@ function start(){
     setTimeout(function () {
       document.getElementById('witchDown').play();
 
-      if(!firstTime){
+      const constableDead = document.getElementById('constableDead').checked;
+      if(!firstTime && !constableDead){
         setTimeout(function () {
           document.getElementById('constableUp').play();
           setTimeout(function () {
