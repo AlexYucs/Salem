@@ -12,15 +12,13 @@ function updatePlayerList(playerName){
   saveButton.onclick = function () {
       savedPlayer(playerName)
   };
-  var deadButton = document.createElement('input');
-  deadButton.type="checkbox";
-  deadButton["data-toggle"]="toggle";
-  deadButton["data-on"]="Alive"
-  deadButton["data-off"]="Dead"
+  var aliveButton = document.createElement('input');
+  aliveButton.type="checkbox";
+  aliveButton.checked=true;
   item.appendChild(document.createTextNode(playerName));
   item.appendChild(killButton);
   item.appendChild(saveButton);
-  item.appendChild(deadButton);
+  item.appendChild(aliveButton);
   playerList.appendChild(item);
 }
 
