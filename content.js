@@ -39,11 +39,11 @@ function savedPlayer(playerName){
 }
 
 function getSaved(){
-  sessionStorage.getItem("killed");
+  document.getElementById("addPlayerButton").value = sessionStorage.getItem("killed");
 }
 
 function getKilled(){
-  sessionStorage.getItem("saved");
+  document.getElementById("addPlayerButton").value = sessionStorage.getItem("saved");
 }
 
 function resetSoft(){
