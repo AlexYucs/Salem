@@ -39,13 +39,13 @@ function savedPlayer(playerName){
 }
 
 function getResults(){
-  document.getElementById("killedName").value = sessionStorage.getItem("killed");
-  document.getElementById("savedName").value = sessionStorage.getItem("saved");
+  document.getElementById("killedName").innerHTML = sessionStorage.getItem("killed");
+  document.getElementById("savedName").innerHTML = sessionStorage.getItem("saved");
 }
 
 function clearResults(){
-  document.getElementById("addPlayerButton").value = "";
-  document.getElementById("addPlayerButton").value = "";
+  document.getElementById("addPlayerButton").innerHTML = "";
+  document.getElementById("addPlayerButton").innerHTML = "";
   sessionStorage.setItem("killed", "");
   sessionStorage.setItem("saved", "");
 }
