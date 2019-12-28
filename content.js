@@ -6,7 +6,7 @@ function updatePlayerList(playerName){
   var killButton = document.createElement('button');
   killButton.innerHTML = 'Kill';
   killButton.onclick = function () {
-      let killCheck = confirm("Are you sure you want to kill ${playerName}?"):
+      let killCheck = confirm("Are you sure you want to kill "+playerName+"?"):
       killCheck && swapPlayerStatus(playerName)
   };
 
