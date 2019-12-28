@@ -65,6 +65,7 @@ function resetHard(){
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
 document.getElementById("resultsButton").onclick = getResults;
+document.getElementById("clearResultsButton").onclick = clearResults;
 document.getElementById("gameResetButton").onclick = resetSoft;
 document.getElementById("fullResetButton").onclick = resetHard;
 
