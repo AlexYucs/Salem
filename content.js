@@ -78,12 +78,12 @@ function savedPlayer(playerName){
 
 function getResults(){
   document.getElementById("killedName").innerHTML =  "Killed: "+sessionStorage.getItem("killed");
-  document.getElementById("savedName").innerHTML =  "Saved: "+sessionStorage.getItem("saved");
+  // document.getElementById("savedName").innerHTML =  "Saved: "+sessionStorage.getItem("saved");
 }
 
 function clearResults(){
   document.getElementById("killedName").innerHTML = "Killed:";
-  document.getElementById("savedName").innerHTML = "Saved:";
+  // document.getElementById("savedName").innerHTML = "Saved:";
   sessionStorage.setItem("killed", "");
   sessionStorage.setItem("saved", "");
 }
