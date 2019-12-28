@@ -5,29 +5,44 @@
   <title>Salem</title>
   <meta name="description" content="Salem">
   <meta name="author" content="Alex Yu">
-  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/blog-post.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Salem 1692</h1>
-  <button id="gameResetButton" >Game Reset</button>
-  <button id="fullResetButton" >Full Reset</button>
-  <br/>
-  <h2>Player List:</h2>
-  <ul id="playerList">
-  </ul>
-  <input id="nameField" placeholder="Enter your name"></input>
-  <button id="addPlayerButton" >Add Player</button>
-  <br/>
-  <h2>Nighttime Results:</h2>
-  <button id="resultsButton">Show Results</button>
-  <button id="clearResultsButton">Clear Results</button>
-  <br/>
-  <h3 id="killedName">Killed: </h3>
-  <br/>
-  <h3 id="savedName">Saved: </h3>
-  <br/>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="mt-4">Salem 1692</h1>
+        <hr>
+        <button id="gameResetButton" >Game Reset</button>
+        <button id="fullResetButton" >Full Reset</button>
+        <br/>
+        <h2>Player List:</h2>
+        <ul id="playerList">
+        </ul>
+        <input id="nameField" placeholder="Enter your name"></input>
+        <button id="addPlayerButton" >Add Player</button>
+        <br/>
+        <hr>
+      </div>
+      <div class="col-md-4">
+        <div class="card my-4">
+          <h5 class="card-header">Nighttime Results:</h5>
+          <div class="card-body">
+            <button id="resultsButton">Show Results</button>
+            <button id="clearResultsButton">Clear Results</button>
+            <br/>
+            <h3 id="killedName">Killed: </h3>
+            <br/>
+            <h3 id="savedName">Saved: </h3>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="content.js"></script>
-  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
