@@ -112,9 +112,22 @@ function resetHard(){
   location.reload();
 }
 
+async function start(){
+  document.getElementById('witchUp').play();
+  await sleep(10000);
+  document.getElementById('witchDown').play();
+  await sleep(2000);
+  document.getElementById('constableUp').play();
+  await sleep(8000);
+  document.getElementById('constableDown').play();
+  await sleep(2000);
+  document.getElementById('end').play();
+}
+
 document.getElementById("addPlayerButton").onclick = addPlayer;
 document.getElementById("resultsButton").onclick = getResults;
 document.getElementById("clearResultsButton").onclick = clearResults;
 document.getElementById("gameResetButton").onclick = resetSoft;
 document.getElementById("fullResetButton").onclick = resetHard;
+document.getElementById("start").onclick = start;
 
