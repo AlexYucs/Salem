@@ -66,6 +66,7 @@ function resetSoft(){
       sessionStorage.setItem(name, "Alive");
     }
   )
+  clearResults();
 }
 
 function resetHard(){
