@@ -2,14 +2,19 @@ function updatePlayerList(playerName){
   let playerList = document.getElementById("playerList")
   let playerStatus = sessionStorage.getItem(playerName);
   var item = document.createElement('li');
-  var newButton = document.createElement('button');
-  newButton.innerHTML = 'Kill';
-  newButton.onclick = function () {
+  var killButton = document.createElement('button');
+  killButton.innerHTML = 'Kill';
+  killButton.onclick = function () {
       swapPlayerStatus(playerName)
-      // this.parentElement.removeChild(this);
+  };
+  var saveButton = document.createElement('button');
+  saveButton.innerHTML = 'Save';
+  saveButton.onclick = function () {
+      savedPlayer(playerName)
   };
   item.appendChild(document.createTextNode(playerName));
-  item.appendChild(newButton);
+  item.appendChild(killButton);
+  item.appendChild(saveButton);
   playerList.appendChild(item);
 }
 
