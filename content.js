@@ -10,8 +10,8 @@ function updatePlayerList(playerName){
       killCheck && swapPlayerStatus(playerName)
   };
 
-  var space = document.createElement('p');
-  space.innerHTML = '  ';
+  //var space = document.createElement('p');
+  //space.innerHTML = '  ';
 
   var saveButton = document.createElement('button');
   saveButton.innerHTML = 'Save';
@@ -25,11 +25,11 @@ function updatePlayerList(playerName){
 
   item.appendChild(document.createTextNode(playerName+"  "));
   item.appendChild(killButton);
-  item.appendChild(space);
+  //item.appendChild(space);
   item.appendChild(aliveButton);
 
   var br = document.createElement('br');  
-  playerList.appendChild(br);
+  //playerList.appendChild(br);
   playerList.appendChild(item);
 }
 
