@@ -25,7 +25,7 @@ function updatePlayerList(playerName){
 
   item.appendChild(document.createTextNode(playerName+"  "));
   item.appendChild(killButton);
-  item.appendChild(space);
+  //item.appendChild(space);
   item.appendChild(aliveButton);
 
   var br = document.createElement('br');  
