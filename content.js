@@ -95,11 +95,15 @@ function resetSoft(){
       sessionStorage.setItem(name, "Alive");
     }
   )
+  /*
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
   for (var i = 0; i < checkboxes.length; i++) {
     checkboxes[i].checked = true;
-    checkboxes[i].fireEvent("onchange");
+    var evt = document.createEvent("HTMLEvents");
+    evt.initEvent("change", false, true);
+    box.dispatchEvent(evt);
   }
+  //*/
   clearResults();
 }
 
