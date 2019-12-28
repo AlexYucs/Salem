@@ -1,24 +1,35 @@
 function updatePlayerList(playerName){
   let playerList = document.getElementById("playerList")
   let playerStatus = sessionStorage.getItem(playerName);
+
   var item = document.createElement('li');
   var killButton = document.createElement('button');
   killButton.innerHTML = 'Kill';
   killButton.onclick = function () {
-      swapPlayerStatus(playerName)
+      let killCheck = confirm("Are you sure you want to kill ${playerName}?"):
+      killCheck && swapPlayerStatus(playerName)
   };
+
+  var space = document.createElement('p');
+  space.innerHTML = '  ';
+
   var saveButton = document.createElement('button');
   saveButton.innerHTML = 'Save';
   saveButton.onclick = function () {
       savedPlayer(playerName)
   };
+
   var aliveButton = document.createElement('input');
   aliveButton.type="checkbox";
   aliveButton.checked=true;
-  item.appendChild(document.createTextNode(playerName));
+
+  item.appendChild(document.createTextNode(playerName+"  "));
   item.appendChild(killButton);
-  item.appendChild(saveButton);
+  item.appendChild(space);
   item.appendChild(aliveButton);
+
+  var br = document.createElement('br');  
+  playerList.appendChild(br);
   playerList.appendChild(item);
 }
 
