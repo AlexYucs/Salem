@@ -1,3 +1,5 @@
+let firstTime = true;
+
 function updatePlayerList(playerName){
   let playerList = document.getElementById("playerList")
   let playerStatus = sessionStorage.getItem(playerName);
@@ -104,10 +106,12 @@ function resetSoft(){
     box.dispatchEvent(evt);
   }
   //*/
+  firstTime = true;
   clearResults();
 }
 
 function resetHard(){
+  firstTime = true;
   sessionStorage.clear();
   location.reload();
 }
@@ -118,7 +122,7 @@ function start(){
   setTimeout(function () {
     document.getElementById('witchDown').play();
     
-    if(true){
+    if(!firstTime){
       setTimeout(function () {
         document.getElementById('constableUp').play();
         setTimeout(function () {
@@ -132,6 +136,7 @@ function start(){
     else {
       setTimeout(function () {
         document.getElementById('end').play();
+        firstTime = false;
       }, 4000);
     }
   }, 12000);
