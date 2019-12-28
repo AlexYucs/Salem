@@ -125,16 +125,16 @@ function start(){
           document.getElementById('constableDown').play();
           setTimeout(function () {
             document.getElementById('end').play();
-          }, 2000);
-        }, 8000);
-      }, 2000);
+          }, 4000);
+        }, 10000);
+      }, 4000);
     }
     else {
       setTimeout(function () {
         document.getElementById('end').play();
-      }, 2000);
+      }, 4000);
     }
-  }, 10000);
+  }, 12000);
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
