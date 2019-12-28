@@ -22,7 +22,6 @@ function addPlayer(){
 }
 
 function swapPlayerStatus(playerName){
-  let playerName = "Alex";
   let status = sessionStorage.getItem(playerName);
   sessionStorage.setItem("saved", "None");
   if(status === "Alive"){
