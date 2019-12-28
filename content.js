@@ -13,6 +13,7 @@ function updatePlayerList(playerName){
       savedPlayer(playerName)
   };
   var deadButton = document.createElement('input');
+  deadButton.type="checkbox";
   deadButton["data-toggle"]="toggle";
   deadButton["data-on"]="Alive"
   deadButton["data-off"]="Dead"
