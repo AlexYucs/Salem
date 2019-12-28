@@ -117,29 +117,31 @@ function resetHard(){
 }
 
 function start(){
-  document.getElementById('witchUp').play();
-  
   setTimeout(function () {
-    document.getElementById('witchDown').play();
-    
-    if(!firstTime){
-      setTimeout(function () {
-        document.getElementById('constableUp').play();
+    document.getElementById('witchUp').play();
+  
+    setTimeout(function () {
+      document.getElementById('witchDown').play();
+
+      if(!firstTime){
         setTimeout(function () {
-          document.getElementById('constableDown').play();
+          document.getElementById('constableUp').play();
           setTimeout(function () {
-            document.getElementById('end').play();
-          }, 4000);
-        }, 10000);
-      }, 4000);
-    }
-    else {
-      setTimeout(function () {
-        document.getElementById('end').play();
-        firstTime = false;
-      }, 4000);
-    }
-  }, 12000);
+            document.getElementById('constableDown').play();
+            setTimeout(function () {
+              document.getElementById('end').play();
+            }, 4000);
+          }, 10000);
+        }, 4000);
+      }
+      else {
+        setTimeout(function () {
+          document.getElementById('end').play();
+          firstTime = false;
+        }, 4000);
+      }
+    }, 12000);
+  }, 3000);
 }
 
 document.getElementById("addPlayerButton").onclick = addPlayer;
