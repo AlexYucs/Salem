@@ -7,11 +7,11 @@ function updatePlayerList(playerName){
   killButton.innerHTML = 'Kill';
   killButton.onclick = function () {
       let killCheck = confirm("Are you sure you want to kill "+playerName+"?");
-      killCheck = swapPlayerStatus(playerName);
+      killCheck && swapPlayerStatus(playerName);
   };
 
   var space = document.createElement('p');
-  space.innerHTML = '  ';
+  space.innerHTML = '&nbsp;&nbsp;';
 
   var saveButton = document.createElement('button');
   saveButton.innerHTML = 'Save';
@@ -29,8 +29,9 @@ function updatePlayerList(playerName){
   item.appendChild(aliveButton);
 
   var br = document.createElement('br');  
+  playerList.appendChild(item);  
   playerList.appendChild(br);
-  playerList.appendChild(item);
+  
 }
 
 function addPlayer(){
